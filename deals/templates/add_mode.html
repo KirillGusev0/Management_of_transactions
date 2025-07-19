@@ -1,0 +1,50 @@
+{% extends "start_page.html" %}
+
+{% block content %}
+
+<h2>Добавить сделку</h2>
+
+<form method="post">
+  {% csrf_token %}
+    <div>
+      <label>Название сделки:</label><br>
+      <input type="text" name="title" required>
+    </div>
+
+    <div>
+    <label> Этап:</label><br>
+    <select name="stage_id">
+    <option value="NEW">Новая</option>
+    <option value="PREPARATION">Подготовка</option>
+    <option value="FINAL_INVOICE">Финальный счет</option>
+    <option value="EXECUTING">Исполнение</option>
+    <option value="PREPAYMENT_INVOICE">Предоплата</option>
+    <option value="WON">Выиграна</option>
+    <option value="LOSE">Провалена</option>
+    <option value="APOLOGY">Требуется анализ</option>
+  </select>
+  </div>
+
+  <div>
+   <label>Cyммa сделки:</label><br>
+   <input type="number" step="0.01" name="opportunity">
+  </div>
+
+  <div>
+   <label>Дата начала сделки:</label><br>
+    <input type="datetime-local" name="begindate">
+  </div>
+
+  <div>
+   <label>Дата окончания сделки:</label><br>
+   <input type="datetime-local" name="closedate">
+  </div>
+
+  <div>
+   <label>Адрecс доставки:</label><br>
+   <textarea name="address"></textarea>
+  </div>
+
+  <button type="submit"> Провести сделку </button>
+</form>
+{% endblock %}

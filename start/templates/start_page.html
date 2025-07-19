@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Битрикс24: Пользователь</title>
+</head>
+<body>
+    <h1>
+        Добро пожаловать {{request.bitrix_user.last_name}} {{request.bitrix_user.first_name}}
+    </h1>
+    {% include "menu.html" %}
+     <div class="content">
+        {% block content %}
+        <!-- Контент по умолчанию (если нужно) -->
+        {% endblock %}
+    </div>
+</body>
+</html>

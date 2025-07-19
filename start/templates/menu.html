@@ -1,0 +1,11 @@
+
+<div class="container">
+
+    <!--<a href="{% url 'active_deals' %}"><button>10 Последних сделок</button></a>-->
+
+    <!--<a href="{% url 'add_deal' %}"><button>Добавить сделку</button></a>-->
+    <button onclick="window.location.href='{% url 'add_deal' %}'">Добавить сделку</button>
+    <button onclick="window.location.href='{% url 'active_deals' %}'">10 Последних сделок</button>
+    {% block content %}{% endblock %}
+</div>
+
