@@ -1,0 +1,19 @@
+{% extends "start_page.html" %}
+
+{% block content %}
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% else %}
+        <h2>{{ product.name }}</h2>
+        <p>Цена: {{ product.price }}</p>
+        <p>Описание: {{ product.description }}</p>
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        {% endif %}
+        <p>ID товара: {{ product.id }}</p>
+
+        <a href="{% url 'QR:generate_qr' %}" class="btn btn-primary">
+            Сгенерировать QR для этого товара
+        </a>
+    {% endif %}
+{% endblock %}

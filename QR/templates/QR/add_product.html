@@ -1,0 +1,13 @@
+<!-- QR/templates/QR/add_product.html -->
+{% extends "start_page.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Добавить товар</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Сохранить</button>
+    </form>
+    <a href="{% url 'bitrix_home' %}" class="btn btn-secondary">Отмена</a>
+</div>
+{% endblock %}

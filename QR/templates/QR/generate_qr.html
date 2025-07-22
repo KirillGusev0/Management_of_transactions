@@ -1,0 +1,10 @@
+{% extends "start_page.html" %}
+{% block content %}
+<h2>Генерация QR кода для товара</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="product_id">ID товара:</label>
+    <input type="text" name="product_id" id="product_id" required>
+    <button type="submit">Сгенерировать QR</button>
+</form>
+{% endblock %}

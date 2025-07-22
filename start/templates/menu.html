@@ -6,6 +6,8 @@
     <!--<a href="{% url 'add_deal' %}"><button>Добавить сделку</button></a>-->
     <button onclick="window.location.href='{% url 'add_deal' %}'">Добавить сделку</button>
     <button onclick="window.location.href='{% url 'active_deals' %}'">10 Последних сделок</button>
+    <button onclick="window.location.href='{% url 'QR:generate_qr' %}'">Генерация QR</button> <!--# Task 2-->
+    <button onclick="window.location.href='{% url 'QR:add_product' %}'">Добавить товар</button>
     {% block content %}{% endblock %}
 </div>
 
