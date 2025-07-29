@@ -8,6 +8,8 @@
     <button onclick="window.location.href='{% url 'active_deals' %}'">10 Последних сделок</button>
     <button onclick="window.location.href='{% url 'QR:generate_qr' %}'">Генерация QR</button> <!--# Task 2-->
     <button onclick="window.location.href='{% url 'QR:add_product' %}'">Добавить товар</button>
+    <button onclick="window.location.href='{% url 'table_of_employees:employee_table' %}'">Таблица сотрудников</button><!--# Task 3-->
+    <button onclick="window.location.href='{% url 'company_map' %}'">Карта компаний</button> <!-- # Task 4 -->
     {% block content %}{% endblock %}
 </div>
 

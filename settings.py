@@ -29,8 +29,11 @@ INSTALLED_APPS = [
 
     'integration_utils.bitrix24',
     'integration_utils.its_utils.app_gitpull',
+
     'start',
     'QR',
+    'table_of_employees',
+    'yandex_map',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +125,10 @@ STATICFILES_DIRS = [
 
 from integration_utils.its_utils.mute_logger import MuteLogger
 ilogger = MuteLogger()
+
+#
+
+#
 
 
 # local settings

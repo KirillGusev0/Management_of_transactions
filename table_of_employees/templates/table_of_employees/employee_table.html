@@ -1,0 +1,37 @@
+{% extends "start_page.html" %}
+
+{% block content %}
+<h2>Сотрудники и их руководители</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Сотрудник</th>
+            <th>Руководители</th>
+            <th>Звонки (за 24ч)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for emp in employees %}
+        <tr>
+            <td>
+                <a href="#" onclick="openEmployeeSlider('{{ emp.id }}')">
+                    {{ emp.name }}
+                </a>
+            </td>
+            <td>{{ emp.supervisors|join:", " }}</td>
+            <td>{{ emp.calls }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+function openEmployeeSlider(userId) {
+    if (typeof BX24 !== "undefined") {
+        BX24.openPath('/company/personal/user/' + userId + '/');
+    } else {
+        alert("BX24 SDK не загружен. Откройте через Bitrix24.");
+    }
+}
+</script>
+{% endblock %}

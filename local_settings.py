@@ -15,17 +15,27 @@ OPEN_AI_API_KEY = 'your-api-key'
 NGROK_URL = 'http://localhost:8000'
 
 APP_SETTINGS = LocalSettingsClass(
-    portal_domain='b24-dev75q.bitrix24.ru',
+    portal_domain='b24-dev75q.bitrix24.ru',#заменить после конца демки
     app_domain='127.0.0.1:8000',
     app_name='Management_of_transactions',
     salt='wefiewofioiI(IF(Eufrew8fju8ewfjhwkefjlewfjlJFKjewubhybfwybgybHBGYBGF',
     secret_key='wefewfkji4834gudrj.kjh237tgofhfjekewf.kjewkfjeiwfjeiwjfijewf',
-    application_bitrix_client_id='local.68767ce6cfbd41.78311284',
-    application_bitrix_client_secret='NL006ZoakbQiVZubB1mYf2bxFzBaFIvh8xJY4pPW92OaiiGutK',
+    application_bitrix_client_id='local.68767ce6cfbd41.78311284',#заменить после конца демки
+    application_bitrix_client_secret='NL006ZoakbQiVZubB1mYf2bxFzBaFIvh8xJY4pPW92OaiiGutK',#заменить после конца демки
     application_index_path='/',
 )
 
 DOMAIN = "56218ef983f3-8301993767665431593.ngrok-free.app"
+
+# Яндекс API ключ (нужен для геокодирования адресов компаний)
+YANDEX_API_KEY = 'ce0d1fa3-35f7-41ab-818e-077aece50986'
+
+# Домен твоего Bitrix24 портала
+BITRIX_DOMAIN = 'b24-dev75q.bitrix24.ru'
+
+# Корневой адрес, по которому доступно приложение
+ROOT_URL = 'http://127.0.0.1:8000'
+
 
 DATABASES = {
     'default': {

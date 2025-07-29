@@ -49,8 +49,7 @@ def add_product(request):
         form = ProductForm()
     return render(request, 'QR/add_product.html', {'form': form})
 
-from django.shortcuts import render, get_object_or_404
-from .models import ProductLink, Product
+
 
 def product_detail_by_uuid(request, uuid):
     """
