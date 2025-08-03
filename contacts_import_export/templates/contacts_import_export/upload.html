@@ -1,0 +1,16 @@
+{% extends "contacts_import_export/base.html" %}
+{% block title %}Загрузка контактов{% endblock %}
+{% block content %}
+<h2>Загрузить контакты</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="file">
+    <button type="submit">Загрузить</button>
+    <a href="{% url 'contacts_import_export:export_contacts' %}" class="btn btn-success">
+    📥 Скачать контакты
+</a>
+</form>
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+{% endblock %}

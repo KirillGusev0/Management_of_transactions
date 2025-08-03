@@ -10,6 +10,7 @@
     <button onclick="window.location.href='{% url 'QR:add_product' %}'">Добавить товар</button>
     <button onclick="window.location.href='{% url 'table_of_employees:employee_table' %}'">Таблица сотрудников</button><!--# Task 3-->
     <button onclick="window.location.href='{% url 'company_map' %}'">Карта компаний</button> <!-- # Task 4 -->
+    <button onclick="window.location.href='{% url 'contacts_import_export:upload_contacts' %}'"> Импорт / Экспорт контактов</button><!-- # Task 5 -->
     {% block content %}{% endblock %}
 </div>
 

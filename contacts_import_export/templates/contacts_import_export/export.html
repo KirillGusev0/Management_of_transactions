@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>📥 Экспорт контактов</h2>
+    <p>Нажмите кнопку, чтобы скачать контакты в формате CSV.</p>
+    <form action="{% url 'contacts_import_export:export_contacts' %}" method="get">
+        <button type="submit" class="btn btn-success">Экспортировать контакты</button>
+    </form>
+</div>
+{% endblock %}

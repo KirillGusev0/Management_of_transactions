@@ -44,8 +44,6 @@ def get_geocode(address):
 @main_auth (on_cookies=True)
 def company_map (request):
     but = request.bitrix_user_token
-    companies = but.call_list_method('crm.company.list')
-
 
     companies = but.call_list_method('crm.company.list', fields={"select": ["*"]})
     # debug
